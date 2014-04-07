@@ -163,6 +163,8 @@ OTHER DEALINGS IN THE SOFTWARE.
             },0);
 
             _bind($this, transfo);
+            
+            _targetCss($this, transfo);
         }
 
         function _overwriteOptions ($this, transfo, settings) {
@@ -378,7 +380,7 @@ OTHER DEALINGS IN THE SOFTWARE.
                     + "transform:" + transform + ";";
             }
 
-            css = css.replace(/;+/g, ';').replace(/^;+|;+$/g, '');
+            css = css.replace(/(\s*;)+/g, ';').replace(/^\s*;|;\s*$/g, '');
 
             $this.attr("style", css);
         }
