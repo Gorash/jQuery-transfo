@@ -99,7 +99,7 @@ OTHER DEALINGS IN THE SOFTWARE.
                             return $this.data('transfo') && $this.data('transfo').settings;
                         });
                     }
-                    return this.data('transfo') && $this.data('transfo').settings;
+                    return this.data('transfo') && this.data('transfo').settings;
                 },
                 center :  function() {
                     if(this.length > 1) {
